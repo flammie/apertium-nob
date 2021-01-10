@@ -24,7 +24,6 @@ $(LANG1).autogen.bin: $(BASENAME).$(LANG1).dix
 
 $(LANG1).automorf.bin: $(BASENAME).$(LANG1).dix $(BASENAME).$(LANG1).acx
 	apertium-validate-dictionary $<
-	test ! -f ./test-scandivoc || ./test-scandivoc
 	apertium-validate-acx $(BASENAME).$(LANG1).acx
 	lt-comp lr $< $@ $(BASENAME).$(LANG1).acx
 
